@@ -28,6 +28,30 @@
     --weight-regular: 400;
   }
   
+
+  /* Size */
+
+
+  /*Universal tags*/
+  * {
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'open sans', sans-serif;
+    margin-top: 0;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--color-white);
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
   /* Typography */
   
   h1 {
@@ -56,4 +80,21 @@
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin: 4px 0;
+  }
+
+  /*Nvbar*/
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-pink);
+    align-items: center;
+    color: var(--color-white)
+    padding: 16px;
+  }
+  .navbar__menu {
+    display: flex;
+  }
+  .navbar__menu__item{
+    padding: 8px 12px;
+    margin: 0 4px;
   }
