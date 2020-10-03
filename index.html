@@ -51,7 +51,7 @@
     </section>
 
     <!-- about -->
-    <section id="about" class="section">
+    <section id="about" class="section section__container">
       <h1>About me</h1>
       <p>
         영어로 쓰려니 못쓰겠다. 물론 영어로 프로그래밍 하니까 잘하려고 요즘 영타
@@ -95,6 +95,8 @@
           </div>
         </div>
       </div>
+      <!-- 이미지 테그에 클레스 넣을 때, 맨 앞에 오게 해야 할 듯 합니다. 맨 뒤로 클레스
+      넣으니까, 안먹혔었음, 왜 그런지는 모르겠어요 -->
       <div class="about__jobs">
         <div class="job">
           <img class="job__logo" src="image/logo.png" alt="logo" />
@@ -115,60 +117,69 @@
     </section>
 
     <!-- skills -->
-    <section id="skills">
-      <h1>skills</h1>
-      <h2>기술과 어트리뷰트</h2>
-      <p>
-        여기에는 내가 할 수 있는 기술들을 작성하는 란이다. 글을 길게 써야 할 것
-        같은데, 나의 장점, 등 뭐 여러가지를 적는듯 하다. 내가 할 수 있는
-        거라고는 뭐... 에이치티엠엘, 시에스에스 이정도? ㅋㅋ
-      </p>
-      <div class="skillset">
-        <div class="skillset__left">
-          <h3 class="skillset__title">skills</h3>
-          <div class="skill">
-            <span>HTML</span>
-            <span>90%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: "></div>
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>skills</h1>
+        <h2>기술과 어트리뷰트</h2>
+        <p>
+          여기에는 내가 할 수 있는 기술들을 작성하는 란이다. 글을 길게 써야 할
+          것 같은데, 나의 장점, 등 뭐 여러가지를 적는듯 하다. 내가 할 수 있는
+          거라고는 뭐... 에이치티엠엘, 시에스에스 이정도? ㅋㅋ
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__description">
+                <span>css</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__description">
+                <span>JAVASCRIPT</span>
+                <span>20%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 20%"></div>
+              </div>
+            </div>
           </div>
 
-          <div class="skill">
-            <span>css</span>
-            <span>80%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: "></div>
-          </div>
-
-          <div class="skill">
-            <span>javascript</span>
-            <span>10%</span>
-          </div>
-          <div class="skill__bar">
-            <div class="skill__value" style="width: "></div>
-          </div>
-        </div>
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skillset__title">Tools</h3>
-            <ul class="Tools__list">
-              <li><span>비쥬얼 스튜디오</span></li>
-              <li><span>아톰</span></li>
-              <li><span>메모장</span></li>
-              <li><span>스티커메모</span></li>
-              <li><span>한글</span></li>
-              <li><span>엑셀조금</span></li>
-            </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skillset__title">ETC</h3>
-            <ul class="etc__list">
-              <li><span>깃허브</span></li>
-              <li><span>깃</span></li>
-              <li><span>배우는 중</span></li>
-            </ul>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="Tools__list">
+                <li><span>비쥬얼 스튜디오</span></li>
+                <li><span>아톰</span></li>
+                <li><span>메모장</span></li>
+                <li><span>스티커메모</span></li>
+                <li><span>한글</span></li>
+                <li><span>엑셀조금</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">ETC</h3>
+              <ul class="etc__list">
+                <li><span>깃허브</span></li>
+                <li><span>깃</span></li>
+                <li><span>배우는 중</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
