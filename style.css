@@ -208,24 +208,29 @@ p {
   font-size: var(--font-small);
 }
 
-.jop {
-  display: flex;
+.job {
+  display: flex; 
   align-items: center;
 }
 
-.jop__description {
+.job__description {
   margin:0 16px;
   text-align: left;
 }
 
-.jop__name,
-.jop__period {
+.job__name,
+.job__period {
   color:var(--color-light-grey);
 }
-.jop__name{
+.job__name{
   font-size: var(--font-small);
 }
 
-.jop__period{
+.job__logo{
+  width: 200px;
+  height: 100px;
+}
+
+.job__period{
   font-size: var(--font-micro);
 }
