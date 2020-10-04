@@ -399,3 +399,42 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 } 
+
+
+/* Testimonial */
+
+/* 여기에서 하는 그 짝수, 홀수랑, 사진 외쪽 오른쪽
+바꾸는 거는 하지 않았다, 나중에 필요하면 강의 찾아보고 하도록 */
+#testimoials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avata {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 12px;
+}
+
+.testimonial__speech-bubble {
+  padding:18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
+}
