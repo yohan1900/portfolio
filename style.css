@@ -130,6 +130,14 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url(image/home-background.png) center/cover no-repeat;
@@ -463,4 +471,47 @@ color: var(--color-white);
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn { 
+    display: block;
+    /* 디스플레이 블락은 보여진다는 뜻의 테그임 */
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors { 
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+    /* 이 위의 플렉스 그로우란 것은 일단 그로우라는 뜻 자체가
+    매꿔준다는 뜻임, 즉, 화면이 작아지면 여백이 많이 남으니까, 그 여백을 
+    없애려고 그로우!! 시켜줌, 1이면 꽉 찬 것을 의미  */
+  }
+
+  .testimonial__avata {
+    width: 80px;
+    height: 80px;
+  }
 }
