@@ -31,3 +31,19 @@ document.addEventListener('click',(event) => {
     const scrollTo = document.querySelector(link); // 여기서 고생함, 여기 링크값은 html의 데이터 값을 받아오는데, 데이터 값의 이름이랑 테그의 아이디값이 달라서 한동안 목가지고왔음 (대소문자 구별 잘해야함.)
     scrollTo.scrollIntoView({behavior:'smooth'});
 });
+
+
+//contact me 버튼 클릭하면 글로 가는거 (혼자해봄) ---> 이미 위에 프로그래밍이 되어있어서, 걍 html문서에 버튼에다가 data-limk만 추가함. 바로됨
+//Handle click on "cotact me" button on home (엘리는 걍 함수로 만들어버림)
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'})
+} // 이건 모든 작업을 간편하게 하기 위한 함수
+
+
+const homeContactBtn = document.querySelector('.home__description');
+homeContactBtn.addEventListener('click',() => {
+    scrollIntoView('#contact');
+})  // 이건 엘리쌤 작품임, 이렇게 하니까 갑자기 코드가 간편해짐?? ㅋㅋ
+
