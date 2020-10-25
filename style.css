@@ -107,6 +107,7 @@ p {
   color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1; /*넷바는 무슨일이 있어도 모든 콘텐츠보다 위에 있게끔 하는 것임*/
 }
 
 #navbar.navbar--dark {
