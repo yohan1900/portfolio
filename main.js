@@ -15,6 +15,9 @@ document.addEventListener('scroll',() => {
 });
 
 
+
+
+
 //Handle  scrolling when tapping on the navbar menu (클릭하면 움직이는 거)
 const navbarMenu = document.querySelector('.navbar__menu');
 document.addEventListener('click',(event) => {
@@ -36,10 +39,6 @@ document.addEventListener('click',(event) => {
 //contact me 버튼 클릭하면 글로 가는거 (혼자해봄) ---> 이미 위에 프로그래밍이 되어있어서, 걍 html문서에 버튼에다가 data-limk만 추가함. 바로됨
 //Handle click on "cotact me" button on home (엘리는 걍 함수로 만들어버림)
 
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:'smooth'})
-} // 이건 모든 작업을 간편하게 하기 위한 함수
 
 
 const homeContactBtn = document.querySelector('.home__description');
@@ -47,3 +46,48 @@ homeContactBtn.addEventListener('click',() => {
     scrollIntoView('#contact');
 })  // 이건 엘리쌤 작품임, 이렇게 하니까 갑자기 코드가 간편해짐?? ㅋㅋ
 
+
+
+
+
+// Make home slowly fade to transparent as the window scrolls dow (home 화면 스크롤 하면 투명하게 바뀌는 거)
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',() => {
+    console.log(1 - window.scrollY / homeHeight);
+    home.style.opacity = 1 - window.scrollY / homeHeight; //홈에 있는 스타일에 있는 오페시티값을 설정하는거 // 
+    // 그러니까 이런말인거 같다. 일단 쿼리셀렉터로 홈을 잡았다. 그리고 거기 안에 있는 스타일, 즉 id = home의 css값을 들어가서 거기서 opacity를 설정한거 같어
+    //이게 된다는 말이지 참 ㅋㅋㅋ 재밌네 
+});
+
+
+
+//arrow (누르면 위로 올라가는 화살표 만들기) --> 이건 내가 함 ㅋㅋ
+const arrow = document.querySelector('.arrow');
+arrow.addEventListener('click',() => {
+    scrollIntoView('#home');
+});
+
+
+//show "arrow up" button scrolling down --> 이건 엘리쌤 도움 조금 받아서 함. 
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight/2) {
+        arrow.classList.add('visible');
+    } else {
+        arrow.classList.remove('visible');
+    }
+})
+
+
+
+
+
+
+
+
+
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'})
+} // 이건 모든 작업을 간편하게 하기 위한 함수
