@@ -21,7 +21,6 @@ document.addEventListener('scroll',() => {
 //Handle  scrolling when tapping on the navbar menu (클릭하면 움직이는 거)
 const navbarMenu = document.querySelector('.navbar__menu');
 document.addEventListener('click',(event) => {
-    console.log(event.target.dataset.link);
     const target = event.target;
     const link = target.dataset.link;
     if(link == null) {
@@ -76,7 +75,53 @@ document.addEventListener('scroll', () => {
     } else {
         arrow.classList.remove('visible');
     }
-})
+});
+
+
+
+// Projects ---> 문제가 생김 누르면 처음에 걸러지다가 없어져 버림... (확인해서 조치합시다.) 지금 내 생각에는 아무래도 undifined 못 잡아서 이렇게 된거 같음. 
+// 문제 해결함, 아무래도 위의 자바스크립트 27줄에 있던 타겟 콘솔로그와 겹치면서 뭔가 에러가 난듯하다. 그거 지우고 다시 차근히 하니까 잘 되네...
+const workBtnContainer = document.querySelector('.work__categories');
+const ProjectContainer = document.querySelector('.work__projects');
+const Projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+    ProjectContainer.classList.add('anim-out');
+    setTimeout(() => {   
+     Projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if(filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+        } else { 
+            project.classList.add('invisible');
+        }
+    });
+        ProjectContainer.classList.remove('anim-out');
+    }, 300);
+
+
+    // 이 밑의 코드는 잘 안되었던 코드이다. 나중에 차분히 보면서 혹시 여기에 문제가 있었는지 확인해봅시다. --> 이거 해결할려고 1시 넘어서 잠. 
+    // ProjectContainer.classList.add('anim-out');
+    // Projects.forEach((project) => {
+    //     console.log(project.dataset.type);
+    //     if (filter === '*' || filter === project.dataset.type) {
+    //         project.classList.remove('invisble');
+    //     } else {
+    //         project.classList.add('invisible');
+    //     }
+
+    //     setTimeout(() => {
+    //         ProjectContainer.classList.remove('anim-out');
+    //     },300);
+    // });
+});
+
+
+
+
 
 
 
