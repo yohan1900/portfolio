@@ -15,6 +15,13 @@ document.addEventListener('scroll',() => {
 });
 
 
+//Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
+
+
 
 
 
@@ -26,6 +33,8 @@ document.addEventListener('click',(event) => {
     if(link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
+    
 
     console.log(event.target.dataset.link);     // 이런작업이 왜 필요한진 모르겠는데, 여튼 엘리먼트 요소에 데이터 셋 없어서 언디파인드 나오는 애들 언디파인드 안나오게 하는 작업임
     //여기부터는 메뉴 누르면 해당 페이지로 스크롤 되는 기능
